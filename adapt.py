@@ -90,7 +90,7 @@ def train_one_epoch(cfg, device, models, optimizer, scheduler, source_loader, sh
 def run_split(cfg, device, models, source_loader, train_tf, test_tf, criterion, dice, split):
     shot_images_tr, shot_labels_tr, _ = load_shot_set(cfg, split, train_tf, device)
     shot_images_te, shot_labels_te, _ = load_shot_set(cfg, split, test_tf, device)
-    query_loader = DataLoader(build_query_set(cfg, split, test_tf), batch_size=cfg.batch_size, shuffle=False,
+    query_loader = DataLoader(build_query_set(cfg, split, test_tf), batch_size=5, shuffle=False,
                               num_workers=cfg.num_workers, pin_memory=True)
 
     params = [p for m in models for p in m.parameters() if p.requires_grad]
