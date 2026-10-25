@@ -32,7 +32,7 @@ class Config:
     save_checkpoint: bool = True
     save_pred: bool = False
 
-    pretrain_epochs: int = 20
+    pretrain_epochs: int = 5
     pretrain_iters_per_epoch: int = 0
     pretrain_lr: float = 1e-4
     source_val_list: str = ''
@@ -43,7 +43,7 @@ class Config:
     first_split: int = 0
     num_splits: int = 5
     reinit_per_split: bool = True
-    epochs: int = 10
+    epochs: int = 15
     iters_per_epoch: int = 30
     max_eval_batches: int = 200
     batch_size: int = 10
@@ -76,7 +76,7 @@ class Config:
     replace_categories: Sequence[int] = (0, 2, 3)
     common_labels_source: Sequence[int] = (1, 5)
     common_labels_target: Sequence[int] = (1, 5)
-    domain_loss_weight: float = 0.5
+    domain_loss_weight: float = 0.02
     domain_min_samples: int = 10
     min_shot_classes_train: int = 3
     use_adapter_in_eval: bool = True
