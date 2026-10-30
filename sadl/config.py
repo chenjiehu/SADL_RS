@@ -41,7 +41,7 @@ class Config:
 
     shot: int = 5
     first_split: int = 0
-    num_splits: int = 5
+    num_splits: int = 10
     reinit_per_split: bool = True
     epochs: int = 15
     iters_per_epoch: int = 30
